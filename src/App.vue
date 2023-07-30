@@ -1,14 +1,22 @@
 <script setup lang="ts">
 import init, { add } from "rust"
+import { ref } from "vue";
+
+const num = ref(0);
 
 init().then(() => {
-  console.log(add(1, 2))
+  num.value = add(1, 2);
 })
+
+const handleKeydown = () => {
+  console.log("keydown");
+}
 
 </script>
 
 <template>
-  123
+  {{num}}
+  <div @click="handleKeydown">123123</div>
 </template>
 
 <style scoped></style>
