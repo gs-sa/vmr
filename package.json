@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "wasm": "wasm-pack build ./rust",
+    "wasm": "wasm-pack build ./rust --target web",
     "dev": "concurrently \"rsw watch\" \"vite\"",
-    "build": "rsw build && tsc && vite build",
+    "build": "vite build",
     "rsw": "rsw"
   },
   "dependencies": {
